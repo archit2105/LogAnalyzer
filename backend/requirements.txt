@@ -1,0 +1,22 @@
+# Web framework + ASGI server
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.5
+
+# LLM client — Azure OpenAI
+openai>=1.30
+
+# Async HTTP client used by nr_client (New Relic GraphQL)
+httpx[http2]>=0.27
+
+# PostgreSQL client — direct connection to the CCM and COIC cart-metadata
+# databases (replaces the old Supabase REST API integration)
+asyncpg>=0.29
+
+# PostgreSQL + pgvector client for the Confluence knowledge base
+# (replaces the old ChromaDB/TF-IDF POC integration)
+psycopg2-binary>=2.9
+pgvector>=0.3
+
+# Used by embeddings.py to call the Azure OpenAI embeddings REST endpoint
+requests>=2.31
